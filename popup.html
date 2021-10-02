@@ -1,25 +1,38 @@
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+  <html>
     <head>
-        <link rel="stylesheet" href="button.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/popup.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/input.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/button.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-        <title></title>
+      <link rel="stylesheet" type="text/css" href="assets/css/popup.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/input.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/button.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <title>FilterMe</title>
     </head>
-    <body>
-        <center>
-            <div class="onoffswitch">
-            <label class="switch" for="notification">
-                Censor <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="notification" />
-                <span class="slider round"></span>
-            </label>
-            </div>
-            <div class="options unselectable" width="200px">
-                <center><h3 id="options">Options</h3></center>
-            </div>
-        </center>
-        <script type="text/javascript" src="assets/js/popup.js"></script>
+    <body tabindex="1">
+    <center>
+      <h1>FilterMe</h1>
+    </center>
+    <hr width="200px">
+      <center>
+      <div class="onoffswitch">
+        <label class="switch" for="notification">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="notification" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    <div id="inputPassword"></div>
+    </center>
+    <hr width="200px">
+      <center>
+        <div class="options unselectable" width="200px">
+          <center>
+            <h3 id="options">Options</h3>
+          </center>
+        </div>
+        <div id="newPassNotif"></div>
+        <div id="optionsPassword"></div>
+      </center>
+    
+    <script type="text/javascript" src="assets/js/popup.js"></script>
+
     </body>
-</html>
+  </html>
