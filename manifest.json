@@ -1,9 +1,37 @@
 {
-    "name": "Hello, World!",
+    "name": "Filter",
+    "description": "Extension that filters out unwanted content and trigger words",
     "version": "1.0",
     "manifest_version": 3,
     "background": {
-      "service_worker": "background.js"
+      "scripts": ["eventPage.js"],
+      "persistent": false
     },
-    "action": {}
+    "content_scripts": [
+        {
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end",
+            
+            "all_frames": true
+        }
+    ],
+    "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": "images/logo.png"
+    },
+    "options_ui":{
+        "page": "options.html"
+    },
+    "permissions": [ 
+        "activeTab",
+        "storage",
+        "unlimitedStorage",
+        "tabs",
+        "https://ajax.googleapis.com/"
+    ],
+    "incognito": "split"
   }
