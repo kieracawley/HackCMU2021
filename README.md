@@ -2,7 +2,7 @@
 
 # This code is going to filter out unwanted websites via chrome extension
 
-#manifest.json file code
+# manifest.json file code
 {
   "name": "Getting Started Example",
   "description": "TBD",
@@ -18,7 +18,7 @@
   }
 ]
 
-content.js file (will interact with webpages using javascript)
+# content.js file (will interact with webpages using javascript)
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if( request.message === "clicked_browser_action" ) {
@@ -32,7 +32,7 @@ chrome.runtime.onMessage.addListener(
   }
 );
 
-// background.js
+# background.js
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function(tab) {
   // Send a message to the active tab
@@ -42,7 +42,6 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   });
 });
 
-// This block is new!
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if( request.message === "open_new_tab" ) {
@@ -50,3 +49,7 @@ chrome.runtime.onMessage.addListener(
     }
   }
 );
+
+# We will need code that allows us to request user input 
+# that asks what they want to filter out, and then actually
+# filter it out using the ending of a URL 
